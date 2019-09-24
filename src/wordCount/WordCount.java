@@ -34,11 +34,12 @@ public class WordCount {
 
         int j = 1;
         for (HashMap.Entry<String, Integer> i : sortedMap) {
-            if (j > 50) {
+            if (j <= 50) {
+                System.out.println(j + ") " + i.getKey() + ": " + i.getValue());
+                j++;
+            } else {
                 break;
             }
-            System.out.println(j + ") " + i.getKey() + ": " + i.getValue());
-            j++;
         }
     }
 }
